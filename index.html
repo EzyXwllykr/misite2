@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiSite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="tabs">
+        <a href="index.html" class="tab active">Machine Learning</a>
+        <a href="indexnew.html" class="tab">Tipos de ML</a>
+    </nav>
+    </header>
+
+    <div class="overlay"></div>
+    <h1 style="text-decoration: underline;">Q&A - Machine Learning</h1>
+
+    <section class="answer">
+        <h2>Diferença entre Aprendizagem por Reforço, Supervisionada e Não Supervisionada</h2>
+        <p>A <strong style="color: navy; text-decoration: underline;">aprendizagem por reforço</strong> se baseia em um processo de tentativa e erro, no qual o agente realiza ações em um ambiente e recebe recompensas ou penalidades de acordo com os resultados obtidos, ajustando seu comportamento ao longo do tempo.</p>
+        <p>Na <strong style="color: navy; text-decoration: underline;">aprendizagem supervisionada</strong> ocorre quando o modelo é treinado com dados que já possuem uma resposta conhecida, permitindo que ele aprenda a relacionar as entradas com as saídas esperadas.</p>
+        <p>Já na <strong style="color: navy; text-decoration: underline;">aprendizagem não supervisionada</strong>, o modelo recebe apenas os dados de entrada, sem informações adicionais, e precisa identificar padrões e estruturas de forma autônoma.</p>
+    </section>
+
+    <section class="answer">
+        <h3>Rótulo no Aprendizado Supervisionado</h3>
+        <p>
+            No aprendizado supervisionado, um rótulo é a informação que indica a resposta correta associada a um dado de entrada. Ele representa o objetivo que o modelo deve alcançar durante o treinamento, servindo como referência para avaliar se a previsão feita está correta ou não. Os rótulos são, portanto, fundamentais para orientar o processo de aprendizado e permitir que o modelo aprenda a generalizar.
+        </p>
+    </section>
+
+    <section class="answer">
+        <h3>O que é um modelo em ML?</h3>
+        <p>
+            Um modelo em aprendizado de máquina é o resultado do processo de treinamento, no qual o sistema analisa dados e ajusta parâmetros internos para ser capaz de realizar previsões ou classificações. Ele é uma representação matemática da relação existente entre as variáveis de entrada e saída e, depois de treinado, pode ser utilizado para analisar novos dados e produzir resultados sem a necessidade de intervenção manual.
+        </p>
+    </section>
+
+    <section class="answer">
+        <h3>O que são hiperparâmetros?</h3>
+        <p>
+            Hiperparâmetros são variáveis definidas antes do início do treinamento de um modelo e que controlam a forma como esse processo ocorre. Eles influenciam diretamente na qualidade do aprendizado, na velocidade de convergência e na capacidade do modelo de se adaptar aos dados. Como não são ajustados automaticamente pelo sistema, precisam ser configurados pelo desenvolvedor ou pesquisador, podendo exigir experimentação até que se encontre a melhor combinação.
+        </p>
+    </section>
+    
+    <section class="answer">
+        <h3>Técnica de regressão linear. Onde pode ser aplicada?</h3>
+        <p>
+            A regressão linear é uma técnica estatística utilizada no aprendizado de máquina para identificar e representar a relação entre variáveis por meio de uma função matemática linear. Essa técnica busca encontrar a melhor linha que se ajusta aos dados disponíveis, permitindo realizar previsões sobre valores futuros com base em informações já conhecidas.
+            Ela pode ser aplicada em situações em que existe uma dependência entre variáveis numéricas, sendo amplamente usada em áreas que envolvem análise de dados, previsão de tendências e apoio à tomada de decisão.
+        </p>
+
+        <pre><code>
+    from sklearn.linear_model import LinearRegression
+    import matplotlib.pyplot as plt
+    import numpy as np
+    
+    x = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+    y = np.array([3, 6, 9, 13, 15])
+    
+    modelo = LinearRegression()
+    modelo.fit(x, y)
+    
+    dias = 7
+    capitulos_previstos = modelo.predict([[dias]])
+    print(f"Depois de {dias} dias, a previsão é que a pessoa leia {capitulos_previstos[0]:.0f} capítulos.")
+    
+    plt.scatter(x, y, color="blue")
+    plt.plot(x, modelo.predict(x), color="red")
+    plt.show()
+        </code></pre>
+        <h3>Gráfico de Regressão Linear</h3>
+        <section class="img">
+        <img src="ibages/Figure_1.png" alt="Gráfico de regressão linear" class="grafico">
+        </section>
+    
+        <h3>Saída do programa</h3>
+        <section class="img">
+        <img src="ibages/Screenshot_1.png" alt="Saída no terminal" class="terminal">
+        </section>        
+    </section>
+</body>
+</html>
