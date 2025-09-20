@@ -1,0 +1,99 @@
+h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-top: 10px; margin-bottom: 40px;
+    
+}
+
+body {
+    background-image: linear-gradient(
+        90deg,
+        #f6efe6 0%,
+        #2a3960 100%
+    );
+    padding: 20px; margin: 40px; margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: #0b1330;
+}
+
+.overlay {
+    position: fixed; /* fica fixa na tela */
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: rgba(39, 2, 54, 0.179); /* vermelho escuro transparente */
+    pointer-events: none;  /* permite clicar no conteúdo abaixo */
+    mix-blend-mode: multiply; /* aplica efeito de “multiplicar” */
+    z-index: 9999;
+}
+
+p {
+    font-size: 16px;
+}
+
+.answer {
+    background-color: rgba(176, 196, 222, 0.7);
+    padding: 15px; margin: 40px auto;
+    border-radius: 10px; box-shadow: 0 3px 20px rgb(7, 7, 67);
+
+    transition: all 0.3s ease;
+}
+
+.answer:hover {
+/* Leve movimento para cima */
+transform: translateY(-5px);
+
+/* Escurecer levemente a section */
+background-color: rgba(176, 196, 222, 0.9);
+
+/* Adicionar sombra */
+box-shadow: 0 8px 20px rgb(7, 7, 67);
+}
+
+pre {
+    background-color: rgba(40, 90, 135, 0.278);
+    padding: 15px; margin: 20px; max-width: auto;
+    border-radius: 8px; overflow-x: auto; font-size: 16px;
+}
+
+.img {
+    background-color: rgba(40, 90, 135, 0.278);
+    padding: 25px; margin: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.grafico {
+    border: 3px solid #0b1330;
+    margin: 20px; max-width:40%; border-radius:8px;
+}
+.terminal {
+    max-width: 60%;
+    margin: 20px; border: 3px solid #0b1330; border-radius:8px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    margin-bottom: 30px; margin-top: 15px;
+    gap: 8px;
+    border: 3px; /* espaço entre abas */
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #dfd9d6; /* floralwhite translúcido */
+    color: #112250;
+    text-decoration: none;    
+    border-radius: 10px; /* cantos superiores arredondados */
+    border: 3px solid;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #dfd9d6; /* efeito hover suave */
+    transform: translateY(-3px);
+}
+
+.tab.active {
+    background-color: #112250; /* crimson mais forte para aba ativa */
+    color: floralwhite;
+    box-shadow: 0 4px 12px #112250;
+    font-weight: bold;
+}
